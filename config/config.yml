@@ -1,0 +1,14 @@
+devices:
+  - name: my_router
+    address: 10.64.34.1
+    user: dbubnov
+    password: p@$$w0rD
+
+features:
+  bgp: false
+  dhcp: true
+  dhcpv6: false
+  routes: false
+  pools: false
+  optics: false
+  wlanif: true

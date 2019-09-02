@@ -39,7 +39,7 @@ var (
 	withWlanIF  = flag.Bool("with-wlanif", false, "retrieves wlan interface metrics")
 	withMonitor = flag.Bool("with-monitor", false, "retrieves ethernet interface monitor info")
 	timeout     = flag.Duration("timeout", collector.DefaultTimeout, "timeout when connecting to devices")
-	tls         = flag.Bool("tls", false, "use tls to connect to routers")
+	tls         = flag.Bool("tls", true, "use tls to connect to routers")
 	insecure    = flag.Bool("insecure", false, "skips verification of server certificate when using TLS (not recommended)")
 	cfg         *config.Config
 )

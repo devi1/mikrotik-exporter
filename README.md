@@ -61,6 +61,7 @@ features:
   routes: true
   pools: true
   optics: true
+  identity: true
 ```
 
 ###### example output

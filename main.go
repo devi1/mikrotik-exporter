@@ -38,6 +38,7 @@ var (
 	withWlanSTA = flag.Bool("with-wlansta", false, "retrieves connected wlan station metrics")
 	withWlanIF  = flag.Bool("with-wlanif", false, "retrieves wlan interface metrics")
 	withMonitor = flag.Bool("with-monitor", false, "retrieves ethernet interface monitor info")
+	withID      = flag.Bool("with-identity", false, "retrieves router identity")
 	timeout     = flag.Duration("timeout", collector.DefaultTimeout, "timeout when connecting to devices")
 	tls         = flag.Bool("tls", true, "use tls to connect to routers")
 	insecure    = flag.Bool("insecure", false, "skips verification of server certificate when using TLS (not recommended)")
@@ -199,6 +200,10 @@ func collectorOptions() []collector.Option {
 	if *withMonitor || cfg.Features.Monitor {
 		opts = append(opts, collector.Monitor())
 
+	}
+
+	if *withID || cfg.Features.Identity {
+		opts = append(opts, collector.WithID())
 	}
 
 	if *timeout != collector.DefaultTimeout {

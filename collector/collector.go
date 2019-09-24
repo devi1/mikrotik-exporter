@@ -119,6 +119,13 @@ func Monitor() Option {
 	}
 }
 
+// WithID enables Router Identity
+func WithID() Option {
+	return func(c *collector) {
+		c.collectors = append(c.collectors, newIdentityCollector())
+	}
+}
+
 // WithTimeout sets timeout for connecting to router
 func WithTimeout(d time.Duration) Option {
 	return func(c *collector) {

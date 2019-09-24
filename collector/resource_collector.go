@@ -54,7 +54,7 @@ func (c *resourceCollector) collect(ctx *collectorContext) error {
 	}
 
 	for _, re := range stats {
-			c.collectForStat(re, ctx)
+		c.collectForStat(re, ctx)
 	}
 
 	return nil
@@ -82,8 +82,6 @@ func (c *resourceCollector) collectForStat(re *proto.Sentence, ctx *collectorCon
 func (c *resourceCollector) collectMetricForProperty(property string, re *proto.Sentence, ctx *collectorContext) {
 	var v float64
 	var err error
-//	const boardname = "BOARD"
-//	const version = "3.33.3"
 
 	boardname := re.Map["board-name"]
 	version := re.Map["version"]

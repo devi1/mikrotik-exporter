@@ -1,0 +1,17 @@
+devices:
+  - name: test1
+    address: 10.64.138.1
+    user: dbubnov
+    password: ikfcfifgjijcct
+    tls: true
+
+features:
+  bgp: true
+  dhcp: true
+  dhcpv6: true
+  dhcpl: true
+  routes: true
+  pools: true
+  optics: true
+  wlansta: true
+  wlanif: true
